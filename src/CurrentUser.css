@@ -1,7 +1,8 @@
 .CurrentUser {
-    border: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: 287px;
   }
 
   .CurrentUser--identification {

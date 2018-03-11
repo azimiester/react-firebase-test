@@ -45,6 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div className="App--sidebar">
         {!this.state.currentUser && <SignIn handleSignIn={this.handleSignIn} />}
         {this.state.currentUser && (
           <CurrentUser currentUser={this.state.currentUser} />
@@ -52,7 +53,8 @@ class App extends Component {
         {this.state.currentUser && (
           <NewMessage handleNewMessage={this.handleNewMessage} />
         )}
-        <Messages messages={this.state.messages} />
+      </div>
+      <Messages messages={this.state.messages} />
       </div>
     );
   }

@@ -10,10 +10,8 @@ const Message = ({ key, message, user, time }) => (
         src={user.photoURL}
       />
     </div>
-    <div className="Message--main">
-      <h4 className="Message--user">{ user.displayName }</h4>
-      <p className="Message--content">{ message }</p>
-    </div>
+      <p className="Message--user">{ user.displayName }: <span className="Message--content">{ message }</span></p>
+
   </article>
 );
 

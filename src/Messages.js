@@ -5,6 +5,7 @@ import './Messages.css';
 
 const Messages = ({messages}) => (
   <section className="Messages">
+    <h1> Live Coding Chat Application (React + Firebase) </h1>
     {
       map(messages, (message, key) => (
         <Message 

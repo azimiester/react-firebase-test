@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}

@@ -24,7 +24,7 @@ class NewMessage extends Component {
     className="NewMessage"
     onSubmit={this.handleSubmit}>
     <label>
-      <input
+      <textarea
         className="NewMessage--content"
         type="text"
         placeholder="What's on your mind?"

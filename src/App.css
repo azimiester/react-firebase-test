@@ -1,0 +1,9 @@
+.App {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.App--sidebar {
+  min-width: 287px;
+}

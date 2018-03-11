@@ -1,0 +1,34 @@
+.Messages {
+    flex: 1;
+    padding: 20px;
+}
+.Message{
+    display: flex;
+	flex-flow: row wrap;
+    flex: 0 1 auto;
+    background-color: white;
+    margin-bottom: 8px;
+    align-items: center;
+    padding: 10px;
+}
+
+.Message--display{
+    width: 30px;
+    height: 30px;
+
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    border-radius: 50%; 
+}
+.Message--avatar{
+    flex: 0 5%;
+}
+.Message--user{
+    flex: 0 95%; 
+    font-weight: bold;
+}
+.Message--content{
+
+    font-weight: normal;
+}
+

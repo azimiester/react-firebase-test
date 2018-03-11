@@ -1,4 +1,13 @@
 .Messages {
     flex: 1;
-  }
-  
+    padding: 20px;
+}
+.Message--display{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.Message--avatar{
+
+}
+

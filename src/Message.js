@@ -5,6 +5,7 @@ const Message = ({ key, message, user, time }) => (
   <article className="Message">
     <div className="Message--avatar">
       <img
+        className="Message--display"
         alt="presentation"
         src={user.photoURL}
       />

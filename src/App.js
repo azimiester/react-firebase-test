@@ -11,30 +11,35 @@ class App extends Component {
     super(props);
     this.state = {
       currentUser: null,
-      messages: []
+      messages: null
     };
-    this.handleSignIn = this.handleSignIn.bind(this);
     this.handleNewMessage = this.handleNewMessage.bind(this);
+    this.chatRef = database.ref('/chat');
   }
 
-  handleSignIn() {
-    this.setState({
-      currentUser: {
-        displayName: "Nawaz Sharif",
-        photoURL:
-          "https://resize.indiatvnews.com/en/resize/newbucket/715_-/2018/02/nawaz-1518614509.jpg",
-        email: "test email"
-      }
+
+
+  componentDidMount() {
+    auth.onAuthStateChanged((currentUser) => {
+      //may be use pick from loadash
+      const user = { email: currentUser.email, displayName: currentUser.displayName, photoURL: currentUser.photoURL };
+      this.setState({ currentUser: user });
+      
+    });
+    this.chatRef.on('value', (snapshot) => {
+      this.setState({ messages: snapshot.val() });
     });
   }
+
   handleNewMessage(message) {
     const newMessage = {
       message: message,
       user: this.state.currentUser,
       time: new Date().getTime()
-    }
-    this.setState({messages : [...this.state.messages , newMessage]});
-    console.log(this.state.messages);
+    };
+    console.log(newMessage);
+    //this.setState({messages : [...this.state.messages , newMessage]});
+    this.chatRef.push(newMessage);
   }
 
   render() {

@@ -3,14 +3,17 @@
     display: flex;
     justify-content: space-between;
   }
-  
+
   .CurrentUser--identification {
     padding: 1em;
     flex: 1;
   }
-  
+
   .CurrentUser--photo {
-    max-height: 150px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      padding: 15px;
   }
-  
-  
+
+
